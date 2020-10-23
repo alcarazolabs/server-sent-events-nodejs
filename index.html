@@ -1,0 +1,17 @@
+<html>
+    <head>Prueba Server-Send Events</head>
+
+<body>
+    <script type="text/javascript">
+        const evtSource = new EventSource('http://localhost:3000/eventstream');
+        evtSource.addEventListener('message', event => {
+            const data = JSON.parse(event.data);
+            console.log(data);
+                //
+                // ...insert magic here!
+                //
+        })
+    </script>
+</body>
+
+</html>
